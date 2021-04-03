@@ -1,4 +1,3 @@
-const { SSL_OP_NETSCAPE_CA_DN_BUG } = require('constants');
 const express = require('express');
 const path = require('path');
 
