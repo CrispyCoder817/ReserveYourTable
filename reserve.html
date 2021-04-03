@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-        <!--Title-->
+        <!--Title w/Btns-->
         <div class="jumbotron text-center">
             <h1>Hot Resturant</h1>
             <h3>Current Reservations and waiting list!</h3>
@@ -29,24 +29,57 @@
                 </button>
             </a>
         </div>
-        <!--Input Display-->
+        <!--Input for making Reservations-->
         <div class="row">
             <div class="col-12">
-                <!--Current Reservations-->
+                <!--Make Reservations Title-->
                 <div class="card">
                     <div class="card-header">
                         <h3><strong>Make Reservation</strong></h3>
                     </div>
                 </div>
-                <!--Input-->
-                <div>
-                
+                <!--Input for Reservations-->
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="reserve-name" class="col-sm-2 col-form-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="reserve-name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reserve-phone" class="col-sm-2 col-form-label">Phone Number</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="reserve-phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reserve-email" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="reserve-email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reserve-unique-id" class="col-sm-2 col-form-label">Unique ID</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="reserve-unique-id">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">submit</button>
+                    </form>
+
                 </div>
             </div>
         </div>
-        <!--Javascript-->
-        <script type="text/javascript">
+        <!--Will wait to create footer-->
+        <footer>
 
-        </script>
+        </footer>
+    </div>
+    <!--Javascript-->
+    <script type="text/javascript">
+
+    </script>
 </body>
+
 </html>
