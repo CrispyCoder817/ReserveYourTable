@@ -23,37 +23,37 @@ const tables = [
 // res.send("Make your reservation!")
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'view.html')));
 
-// Displays all characters
-app.get('/api/characters', (req, res) => res.json(characters));
+// Displays all tables
+app.get('/api/tables', (req, res) => res.json(tables));
 
-// Displays a single character, or returns false
-app.get('/api/characters/:character', (req, res) => {
-  const chosen = req.params.character;
+// Displays a single table, or returns false
+app.get('/api/tables/:reservation', (req, res) => {
+  const tableData = req.params.tables;
 
-  console.log(chosen);
+  console.log(tableData);
 
-  for (let i = 0; i < characters.length; i++) {
-    if (chosen === characters[i].routeName) {
-      return res.json(characters[i]);
+  for (let i = 0; i < tables.length; i++) {
+    if (tableData === tables[i].routeName) {
+      return res.json(tables[i]);
     }
   }
 
   return res.json(false);
 });
 
-  // Create New Characters - takes in JSON input
-app.post('/api/characters', (req, res) => {
+  // Create New Tables - takes in JSON input
+app.post('/api/tables', (req, res) => {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware
-    const newcharacter = req.body;
+    const newReservation = req.body;
   
-    console.log(newcharacter);
+    console.log(newReservation);
   
     // We then add the json the user sent to the character array
-    characters.push(newcharacter);
+    tables.push(newReservation);
   
     // We then display the JSON to the users
-    res.json(newcharacter);
+    res.json(newReservation);
   });
   
   // Starts the server to begin listening
